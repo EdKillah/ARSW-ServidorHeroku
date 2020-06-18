@@ -32,7 +32,7 @@ public class Html5Resource {
             cadena.append(line);
         }
         out.println("HTTP/1.1 200 OK \r\n");		
-        out.println("Content-Type: "+type"; charset=\"utf-8\" \r\n");
+        out.println("Content-Type: "+type+"; charset=\"utf-8\" \r\n");
         //out.println();
         out.println(cadena);
 
