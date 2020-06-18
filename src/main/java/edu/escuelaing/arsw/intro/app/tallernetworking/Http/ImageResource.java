@@ -37,7 +37,7 @@ public class ImageResource {
         //System.out.println("PASA EL PRIMER LINEA");
 		//out.println("Archivoo: "+archivoNombre);
         out.println("HTTP/1.1 200 OK \r\n");
-        out.println("Content-Type: image/png \r\n"");
+        out.println("Content-Type: image/png \r\n");
         out.println();
         ImageIO.write(image, "PNG", clientSocket);
         
