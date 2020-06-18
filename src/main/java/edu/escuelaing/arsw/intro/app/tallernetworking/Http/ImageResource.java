@@ -30,12 +30,12 @@ public class ImageResource {
         }
         //BufferedImage image = ImageIO.read(new File(System.getProperty("user.dir") + "/resources" + "/suzaku.PNG"));
         //BufferedImage image = ImageIO.read(new File("C:\\Users\\Z470\\Documents\\NetBeansProjects\\TallerNetworking\\src\\main\\resources\\img\\"+res)); 
-			BufferedImage image = ImageIO.read(new File(archivoNombre+"/img/"+res)); 
+		BufferedImage image = ImageIO.read(new File(archivoNombre+"/img/"+res)); 
         //BufferedImage image = ImageIO.read(archivoEncontrado);
         //new File("C:\\Users\\Z470\\Documents\\NetBeansProjects\\TallerNetworking\\src\\main\\resources\\img\\bugs.jpg")
                     //C:\Users\Z470\Documents\NetBeansProjects\TallerNetworking\src\main\resources\img\suzaku.png
         //System.out.println("PASA EL PRIMER LINEA");
-
+		out.println("Archivoo: "+archivoNombre);
         out.println("HTTP/1.1 200 OK");
         out.println("Content-Type: image/png");
         out.println();
