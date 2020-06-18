@@ -23,11 +23,13 @@ public class ImageResource {
         System.out.println("entra?????? ****final: "+archivoEncontrado);
         System.out.println("ME ENCUENTRO EN IMAGEN Y ESTA ES LA RES: "+res);
 		String archivoNombre =  archivoEncontrado.toString().replace(res, "");
+		File f = new File(archivoNombre+"/img/"+res);
         if(res.contains("img/")){
             
             res = res.substring(4,res.length());
             System.out.println("Entro en condicAICIOn: "+res);
         }
+		System.out.println("Questa e la imagine: "+f.toString());
         //BufferedImage image = ImageIO.read(new File(System.getProperty("user.dir") + "/resources" + "/suzaku.PNG"));
         //BufferedImage image = ImageIO.read(new File("C:\\Users\\Z470\\Documents\\NetBeansProjects\\TallerNetworking\\src\\main\\resources\\img\\"+res)); 
 		BufferedImage image = ImageIO.read(new File(archivoNombre+"/img/"+res)); 
@@ -38,7 +40,8 @@ public class ImageResource {
 		//out.println("Archivoo: "+archivoNombre);
         out.print("HTTP/1.1 200 OK \r\n");
         out.print("Content-Type: image/png \r\n");
-        out.print("\r\n");
+		
+        out.print("\r\n\r\n");
         ImageIO.write(image, "PNG", clientSocket);
         
     }
