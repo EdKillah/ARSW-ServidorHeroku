@@ -97,12 +97,12 @@ public class HttpServer implements Runnable {
     private void getRequestFile(File archivoEncontrado, PrintWriter out,
             String res, Socket clientSocket) throws IOException {
 
-        if (res.contains("png") || res.contains("jpg")) {
-			
+        if (res.contains("png") || res.contains("jpg") || res.contains("PNG") || res.contains("JPG")) {
+			error("","andavalidandohImagen "+archivoEncontrado+ " -- "+res,out);
             ImageResource imgr = new ImageResource();
             imgr.drawImage(clientSocket.getOutputStream(), out, res, archivoEncontrado);
         } else if (res.contains("html") || res.contains("HTML")) {
-			error("","andavalidandohtml"+archivoEncontrado+ " -- "+res,out);
+			error("","andavalidandohtml "+archivoEncontrado+ " -- "+res,out);
             Html5Resource texto = new Html5Resource();
             texto.writeText(clientSocket.getOutputStream(), out, archivoEncontrado, "text/html");
         } else if (res.contains(".js")) {
@@ -128,8 +128,8 @@ public class HttpServer implements Runnable {
      */
     private File buscarArchivo(String res) {
         //BuscarArchivo find = new BuscarArchivo();
-        //return new File(System.getProperty("user.dir") + "\\src\\main\\resources\\" + res); //"index.html"
-		return new File("/src/main/resources/"+res);
+        return new File(System.getProperty("user.dir") + "\\src\\main\\resources\\" + res); //"index.html"
+		//return new File("/src/main/resources/"+res);
 
     }
 
