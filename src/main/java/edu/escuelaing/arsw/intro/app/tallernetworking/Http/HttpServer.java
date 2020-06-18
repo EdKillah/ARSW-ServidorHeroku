@@ -75,7 +75,7 @@ public class HttpServer implements Runnable {
 
             if (archivoEncontrado != null) {
                 try {
-					error("","buscandoElArchivo"+res,out);
+					error("","buscandoElArchivo "+archivoEncontrado+" "+res,out);
                     getRequestFile(archivoEncontrado, out, res, clientSocket);
                 } catch (java.io.FileNotFoundException ex) {
                     error(outputLine, res,out);
