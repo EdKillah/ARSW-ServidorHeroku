@@ -98,7 +98,9 @@ public class HttpServer implements Runnable {
             String res, Socket clientSocket) throws IOException {
 
         if (res.contains("png") || res.contains("jpg") || res.contains("PNG") || res.contains("JPG")) {
-			error("","andavalidandohImagen "+archivoEncontrado+ " -- "+res,out);
+			error("","andavalidandohImagenX2	 "+archivoEncontrado+ " -- "+res,out);
+			String archivoNombre =  archivoEncontrado.getName().replace(res, "");
+			error("","NuevoNombre: "+archivoNombre,out);
             ImageResource imgr = new ImageResource();
             imgr.drawImage(clientSocket.getOutputStream(), out, res, archivoEncontrado);
         } else if (res.contains("html") || res.contains("HTML")) {
