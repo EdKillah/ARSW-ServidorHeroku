@@ -53,7 +53,7 @@ public class ImageResource {
 		//BufferedImage image = ImageIO.read(f); 
 		
 		
-		BufferedImage image = ImageIO.read(new File("app/src/main/resources/img/suzaku.png")); 
+		BufferedImage image = ImageIO.read(new File("/app/src/main/resources/img/bugs.jpg")); 
 		
 		
         //BufferedImage image = ImageIO.read(archivoEncontrado);
