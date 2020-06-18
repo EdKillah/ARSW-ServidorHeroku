@@ -68,22 +68,24 @@ public class HttpServer implements Runnable {
     private void getPetitions(String res,PrintWriter out ) throws IOException{
         String outputLine = "";
 		//error("",res,out);
-        if (res.substring(0, 3).equals("GET")) {
-            res = res.substring(5, res.length() - 9);
+		if(res.length()>0){
+			if (res.substring(0, 3).equals("GET")) {
+				res = res.substring(5, res.length() - 9);
 
-            File archivoEncontrado = buscarArchivo(res);
+				File archivoEncontrado = buscarArchivo(res);
 
-            if (archivoEncontrado != null) {
-                try {
-					//error("","buscandoElArchivo "+archivoEncontrado+" -- "+res,out);
-                    getRequestFile(archivoEncontrado, out, res, clientSocket);
-                } catch (java.io.FileNotFoundException ex) {
-                    error(outputLine, res,out);
-                }
-            } else {
-                error(outputLine,"Peticionget: "+ res,out);
-            }
-        }        
+				if (archivoEncontrado != null) {
+					try {
+						//error("","buscandoElArchivo "+archivoEncontrado+" -- "+res,out);
+						getRequestFile(archivoEncontrado, out, res, clientSocket);
+					} catch (java.io.FileNotFoundException ex) {
+						error(outputLine, res,out);
+					}
+				} else {
+					error(outputLine,"Peticionget: "+ res,out);
+				}
+			}        
+		}
     }
 
     /**
