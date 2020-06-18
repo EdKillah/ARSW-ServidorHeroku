@@ -35,7 +35,7 @@ public class ImageResource {
         //new File("C:\\Users\\Z470\\Documents\\NetBeansProjects\\TallerNetworking\\src\\main\\resources\\img\\bugs.jpg")
                     //C:\Users\Z470\Documents\NetBeansProjects\TallerNetworking\src\main\resources\img\suzaku.png
         //System.out.println("PASA EL PRIMER LINEA");
-		out.println("Archivoo: "+archivoNombre);
+		//out.println("Archivoo: "+archivoNombre);
         out.println("HTTP/1.1 200 OK");
         out.println("Content-Type: image/png");
         out.println();
