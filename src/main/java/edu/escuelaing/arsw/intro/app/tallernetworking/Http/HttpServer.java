@@ -102,6 +102,7 @@ public class HttpServer implements Runnable {
         if (res.contains("png") || res.contains("jpg") || res.contains("PNG") || res.contains("JPG")) {
 			//error("","andavalidandohImagenX2	 "+archivoEncontrado+ " -- "+res,out);
 			String archivoNombre =  archivoEncontrado.toString().replace(res, "");
+			System.out.println("Este es el archivo nombre: "+archivoNombre);
 			//error("","NuevoNombre: "+archivoNombre,out);
             ImageResource imgr = new ImageResource();
             imgr.drawImage(clientSocket.getOutputStream(), out, res, archivoEncontrado);
