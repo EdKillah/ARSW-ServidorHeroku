@@ -51,7 +51,7 @@ public class ImageResource {
 		//BufferedImage image = ImageIO.read(new File(archivoNombre+"img/"+res)); 
 		  //BufferedImage image = ImageIO.read(new File("/app/src/main/resources/img/suzaku.png")); 
 		//BufferedImage image = ImageIO.read(f); 
-		BufferedImage image = ImageIO.read(new File("resources/img/suzaku.PNG")); 
+		BufferedImage image = ImageIO.read(new File("/bugs.JPG")); 
 		
 		
         //BufferedImage image = ImageIO.read(archivoEncontrado);
@@ -67,7 +67,7 @@ public class ImageResource {
         //out.print("HTTP/1.1 200 OK \r\n");
         //out.print("Content-Type: image/png \r\n");
         //out.print("\r\n\r\n");
-        ImageIO.write(image, "PNG", clientSocket);
+        ImageIO.write(image, "JPGE", clientSocket);
         
     }
 }
