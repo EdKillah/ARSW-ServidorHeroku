@@ -34,7 +34,14 @@ public class ImageResource {
 		//}
 		//else{
 		//	String axa=f.toString();
-		//	System.out.println("Questa e la imagine: "+f.toString());
+		File f = new File("\\src\\main\\resources\\img\\suzaku.png");
+		if(f==null){
+			System.out.println("Y TAN LARGO EL RENCOR");
+		}
+		else{
+			System.out.println("Questa e la imagine: "+f.toString());
+			System.out.println("Questa e la imagine: "+f);
+		}
 		//}
 		
         //BufferedImage image = ImageIO.read(new File(System.getProperty("user.dir") + "/resources" + "/suzaku.PNG"));
