@@ -110,7 +110,7 @@ public class HttpServer implements Runnable {
             texto.writeText(clientSocket.getOutputStream(), out, archivoEncontrado, "text/css");
         }
         else{
-            error("",res,out);
+            error("","esta pasandose por aca",out);
             //out.println(outputLine);
         }
     }
