@@ -28,9 +28,11 @@ public class Html5Resource {
         BufferedReader reader = new BufferedReader(prueba);
 
         while ((line = reader.readLine()) != null) {
+
             cadena.append(line);
         }
-        out.println("HTTP/1.1 200 OK");
+		out.println("CANDENA: "+"archivoEncontrado "+archivo" -- "+cadena);
+        out.println("HTTP/1.1 200 OK");		
         out.println("Content-Type: "+type);
         out.println();
         out.println(cadena);
