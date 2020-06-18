@@ -67,7 +67,7 @@ public class ImageResource {
         //out.print("HTTP/1.1 200 OK \r\n");
         //out.print("Content-Type: image/png \r\n");
         //out.print("\r\n\r\n");
-        ImageIO.write(image, "JPGE", clientSocket);
+        ImageIO.write(image, "PNG", clientSocket);
         
     }
 }
