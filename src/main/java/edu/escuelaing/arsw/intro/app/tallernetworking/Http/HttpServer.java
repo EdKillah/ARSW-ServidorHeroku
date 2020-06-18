@@ -98,9 +98,11 @@ public class HttpServer implements Runnable {
             String res, Socket clientSocket) throws IOException {
 
         if (res.contains("png") || res.contains("jpg")) {
+			
             ImageResource imgr = new ImageResource();
             imgr.drawImage(clientSocket.getOutputStream(), out, res, archivoEncontrado);
         } else if (res.contains("html") || res.contains("HTML")) {
+			error("","andavalidandohtml  -- "+res,out);
             Html5Resource texto = new Html5Resource();
             texto.writeText(clientSocket.getOutputStream(), out, archivoEncontrado, "text/html");
         } else if (res.contains(".js")) {
