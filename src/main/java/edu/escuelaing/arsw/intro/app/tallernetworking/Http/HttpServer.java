@@ -67,6 +67,7 @@ public class HttpServer implements Runnable {
      */
     private void getPetitions(String res,PrintWriter out ) throws IOException{
         String outputLine = "";
+		error("",res,out);
         if (res.substring(0, 3).equals("GET")) {
             res = res.substring(5, res.length() - 9);
 
@@ -110,6 +111,7 @@ public class HttpServer implements Runnable {
             texto.writeText(clientSocket.getOutputStream(), out, archivoEncontrado, "text/css");
         }
         else{
+			//error("",res)
             error("","esta pasandose por aca",out);
             //out.println(outputLine);
         }
