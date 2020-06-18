@@ -73,7 +73,7 @@ public class HttpServer implements Runnable {
 				res = res.substring(5, res.length() - 9);
 
 				File archivoEncontrado = buscarArchivo(res);
-
+				System.out.println("archivoENCONTRADO: "+archivoEncontrado);
 				if (archivoEncontrado != null) {
 					try {
 						//error("","buscandoElArchivo "+archivoEncontrado+" -- "+res,out);
