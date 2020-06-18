@@ -23,19 +23,19 @@ public class ImageResource {
         System.out.println("entra?????? ****final: "+archivoEncontrado);
         System.out.println("ME ENCUENTRO EN IMAGEN Y ESTA ES LA RES: "+res);
 		String archivoNombre =  archivoEncontrado.toString().replace(res, "");
-		File f = new File(archivoNombre+"img/"+res);
+		//File f = new File(archivoNombre+"img/"+res);
         if(res.contains("img/")){
             
             res = res.substring(4,res.length());
             System.out.println("Entro en condicAICIOn: "+res);
         }
-		if(f==null){
-			System.out.println("ES NULO ESTA PORQUERIA");
-		}
-		else{
-			String axa=f.toString();
-			System.out.println("Questa e la imagine: "+f.toString());
-		}
+		//if(f==null){
+		//	System.out.println("ES NULO ESTA PORQUERIA");
+		//}
+		//else{
+		//	String axa=f.toString();
+		//	System.out.println("Questa e la imagine: "+f.toString());
+		//}
 		
         //BufferedImage image = ImageIO.read(new File(System.getProperty("user.dir") + "/resources" + "/suzaku.PNG"));
         //BufferedImage image = ImageIO.read(new File("C:\\Users\\Z470\\Documents\\NetBeansProjects\\TallerNetworking\\src\\main\\resources\\img\\"+res)); 
