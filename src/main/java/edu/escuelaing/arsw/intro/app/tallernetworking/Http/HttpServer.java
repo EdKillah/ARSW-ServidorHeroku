@@ -75,7 +75,7 @@ public class HttpServer implements Runnable {
 
             if (archivoEncontrado != null) {
                 try {
-					error("","buscandoElArchivo "+archivoEncontrado+" "+res,out);
+					error("","buscandoElArchivo "+archivoEncontrado+" -- "+res,out);
                     getRequestFile(archivoEncontrado, out, res, clientSocket);
                 } catch (java.io.FileNotFoundException ex) {
                     error(outputLine, res,out);
@@ -176,7 +176,7 @@ public class HttpServer implements Runnable {
                 + "<title>Title of the document</title>\n"
                 + "</head>"
                 + "<body>"
-                + "<h1>ERROR 404.<p><div style='color:red'>" + res.toUpperCase() + "</div>" + " NO ENCONTRADO</p></h1>"
+                + "<h1>ERROR 404.<p><div style='color:red'>" + res + "</div>" + " NO ENCONTRADO</p></h1>"
                 + "</body>"
                 + "</html>";
         out.println(outputLine);
