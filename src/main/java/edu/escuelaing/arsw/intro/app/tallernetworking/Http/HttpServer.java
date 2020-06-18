@@ -67,7 +67,7 @@ public class HttpServer implements Runnable {
      */
     private void getPetitions(String res,PrintWriter out ) throws IOException{
         String outputLine = "";
-		error("",res,out);
+		//error("",res,out);
         if (res.substring(0, 3).equals("GET")) {
             res = res.substring(5, res.length() - 9);
 
@@ -75,6 +75,7 @@ public class HttpServer implements Runnable {
 
             if (archivoEncontrado != null) {
                 try {
+					error("","buscandoElArchivo"+res,out);
                     getRequestFile(archivoEncontrado, out, res, clientSocket);
                 } catch (java.io.FileNotFoundException ex) {
                     error(outputLine, res,out);
@@ -99,7 +100,7 @@ public class HttpServer implements Runnable {
         if (res.contains("png") || res.contains("jpg")) {
             ImageResource imgr = new ImageResource();
             imgr.drawImage(clientSocket.getOutputStream(), out, res, archivoEncontrado);
-        } else if (res.contains("html")) {
+        } else if (res.contains("html") || res.contains("HTML")) {
             Html5Resource texto = new Html5Resource();
             texto.writeText(clientSocket.getOutputStream(), out, archivoEncontrado, "text/html");
         } else if (res.contains(".js")) {
