@@ -36,7 +36,7 @@ public class ImageResource {
 		//}
 		//else{
 		//	String axa=f.toString();
-		File f = new File("/app/src/main/resources/img/suzaku.png");
+		File f = new File("app/src/main/resources/img/suzaku.png");
 		if(f==null){
 			System.out.println("Y TAN LARGO EL RENCOR");
 		}
@@ -51,6 +51,8 @@ public class ImageResource {
 		//BufferedImage image = ImageIO.read(new File(archivoNombre+"img/"+res)); 
 		  //BufferedImage image = ImageIO.read(new File("/app/src/main/resources/img/suzaku.png")); 
 		//BufferedImage image = ImageIO.read(f); 
+		
+		
 		BufferedImage image = ImageIO.read(new File("app/bugs.jpg")); 
 		
 		
