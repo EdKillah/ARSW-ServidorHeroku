@@ -38,7 +38,7 @@ public class ImageResource {
 		//out.println("Archivoo: "+archivoNombre);
         out.print("HTTP/1.1 200 OK \r\n");
         out.print("Content-Type: image/png \r\n");
-        out.print("\r\n\r\n");
+        out.print("\r\n");
         ImageIO.write(image, "PNG", clientSocket);
         
     }
