@@ -22,7 +22,7 @@ public class ImageResource {
         
         System.out.println("entra?????? ****final: "+archivoEncontrado);
         System.out.println("ME ENCUENTRO EN IMAGEN Y ESTA ES LA RES: "+res);
-		String archivoNombre =  archivoEncontrado.getName().replace(res, "");
+		String archivoNombre =  archivoEncontrado.toString().replace(res, "");
         if(res.contains("img/")){
             
             res = res.substring(4,res.length());
