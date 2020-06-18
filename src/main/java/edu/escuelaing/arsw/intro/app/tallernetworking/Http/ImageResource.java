@@ -22,6 +22,7 @@ public class ImageResource {
         
         System.out.println("entra?????? ****final: "+archivoEncontrado);
         System.out.println("ME ENCUENTRO EN IMAGEN Y ESTA ES LA RES: "+res);
+		String archivoNombre =  archivoEncontrado.getName().replace(res, "");
         if(res.contains("img/")){
             
             res = res.substring(4,res.length());
@@ -29,7 +30,7 @@ public class ImageResource {
         }
         //BufferedImage image = ImageIO.read(new File(System.getProperty("user.dir") + "/resources" + "/suzaku.PNG"));
         //BufferedImage image = ImageIO.read(new File("C:\\Users\\Z470\\Documents\\NetBeansProjects\\TallerNetworking\\src\\main\\resources\\img\\"+res)); 
-			BufferedImage image = ImageIO.read(new File(archivoEncontrado+"/img/"+res)); 
+			BufferedImage image = ImageIO.read(new File(archivoNombre+"/img/"+res)); 
         //BufferedImage image = ImageIO.read(archivoEncontrado);
         //new File("C:\\Users\\Z470\\Documents\\NetBeansProjects\\TallerNetworking\\src\\main\\resources\\img\\bugs.jpg")
                     //C:\Users\Z470\Documents\NetBeansProjects\TallerNetworking\src\main\resources\img\suzaku.png
