@@ -31,7 +31,7 @@ public class Html5Resource {
 
             cadena.append(line);
         }
-		out.println("CANDENA: "+"archivoEncontrado "+archivo" -- "+cadena);
+		out.println("CANDENA: "+"archivoEncontrado "+archivoEncontrado+" -- "+cadena);
         out.println("HTTP/1.1 200 OK");		
         out.println("Content-Type: "+type);
         out.println();
