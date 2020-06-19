@@ -20,7 +20,10 @@ public class ImageResource {
 
     public void drawImage(OutputStream  clientSocket,PrintWriter out ,String res, File archivoEncontrado) throws IOException {
         
-			System.out.println("FUNCIONA MIERDA");
+			System.out.println("ImagenResource: res"+res);
+			System.out.println("Path del archivo: "+System.getProperty("user.dir")+ "/resources/" + res);
+			File variable = new File(System.getProperty("user.dir")+ "/resources/" + res);
+			System.out.println("File creado: "+variable);
 			BufferedImage image = ImageIO.read(new File(System.getProperty("user.dir")+ "/resources/" + res));
             ByteArrayOutputStream ArrBytes = new ByteArrayOutputStream();
             DataOutputStream writeImg = new DataOutputStream(clientSocket);
