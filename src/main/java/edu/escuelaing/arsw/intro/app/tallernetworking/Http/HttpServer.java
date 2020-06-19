@@ -124,7 +124,7 @@ public class HttpServer implements Runnable {
         else{
 			System.out.println("Recursos diferentes de html5");
             Html5Resource texto = new Html5Resource();
-            texto.writeText(clientSocket.getOutputStream(), out, archivoEncontrado, "text/php");
+            texto.writeText(clientSocket.getOutputStream(), out, archivoEncontrado, "text/html");
         }
     }
 
