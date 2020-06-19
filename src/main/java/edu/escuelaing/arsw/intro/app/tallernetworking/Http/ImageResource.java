@@ -65,6 +65,7 @@ public class ImageResource {
         System.out.println("la imagen SE MOSTRARAA: "+xxxx);
 		out.println("HTTP/1.1 200 OK");		
         out.println("Content-Type: image/png");
+		binaryOut.writeBytes("Content-Length: " + 442);
         out.println();
 		out.println();
         //out.print("HTTP/1.1 200 OK \r\n");
