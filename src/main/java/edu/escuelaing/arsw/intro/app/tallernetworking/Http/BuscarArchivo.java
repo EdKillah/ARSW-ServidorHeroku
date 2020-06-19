@@ -30,12 +30,9 @@ public class BuscarArchivo
                    buscador(nombre, elemento).toString();
                 } else if (nombre.equalsIgnoreCase(elemento.getName())){ 
                   archivoEncontrado = elemento;
-                  System.out.println("Este es el elemento: "+elemento);
-                  System.out.println("El Archivo ha sido encontrado.");}
+                  }
                 }
             }
-       		System.out.println("SubRuta: "+subRuta);
-       		System.out.println("Este es el elemento: "+archivoEncontrado);
              return archivoEncontrado;
         } 
 }

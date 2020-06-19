@@ -67,8 +67,6 @@ public class HttpServer implements Runnable {
      */
     private void getPetitions(String res,PrintWriter out ) throws IOException{
         String outputLine = "";
-		//error("",res,out);
-		System.out.println("ESTOY EN GET PETITIONS: "+res);
 		if(res.length()>0){
 			if (res.substring(0, 3).equals("GET")) {
 				res = res.substring(5, res.length() - 9);
@@ -76,15 +74,12 @@ public class HttpServer implements Runnable {
 				File archivoEncontrado = buscarArchivo(res);
 				if (archivoEncontrado != null) {
 					try {
-						//error("","buscandoElArchivo "+archivoEncontrado+" -- "+res,out);
-						System.out.println("archivoENCONTRADO: "+archivoEncontrado);
 						getRequestFile(archivoEncontrado, out, res, clientSocket);
 					} catch (java.io.FileNotFoundException ex) {
 						error(outputLine, res,out);
 					}
 				} else {
-					System.out.println("ES ULTRA SUPER NUÑLO MEN : ");
-					error(outputLine,"Peticionget: "+ res,out);
+					error(outputLine,res,out);
 				}
 			}        
 		}
@@ -101,16 +96,10 @@ public class HttpServer implements Runnable {
     private void getRequestFile(File archivoEncontrado, PrintWriter out,
             String res, Socket clientSocket) throws IOException {
 
-        if (res.contains("png") || res.contains("jpg") || res.contains("PNG") || res.contains("JPG")) {
-			//error("","andavalidandohImagenX2	 "+archivoEncontrado+ " -- "+res,out);
-			String archivoNombre =  archivoEncontrado.toString().replace(res, "");
-			System.out.println("Este es el archivo nombre: "+archivoNombre);
-			//error("","NuevoNombre: "+archivoNombre,out);
+        if (res.contains("png") || res.contains("jpg") || res.contains("PNG") || res.contains("JPG")) {		
             ImageResource imgr = new ImageResource();
             imgr.drawImage(clientSocket.getOutputStream(), out, res, archivoEncontrado);
         } else if (res.contains("html") || res.contains("HTML")) {
-			//error("","andavalidandohtml "+archivoEncontrado+ " -- "+res,out);
-			System.out.println("Esta creando condicion de html");
             Html5Resource texto = new Html5Resource();
             texto.writeText(clientSocket.getOutputStream(), out, archivoEncontrado, "text/html");
         } else if (res.contains(".js")) {
@@ -135,11 +124,7 @@ public class HttpServer implements Runnable {
      * @return
      */
     private File buscarArchivo(String res) {
-
-		System.out.println("buscandoArchivo en buscar: "+res);
 		File nuevo = new File(System.getProperty("user.dir") + "/src/main/resources/" + res);
-		System.out.println("Lo pudo crear");
-		//return new File(System.getProperty("user.dir") + "/src/main/resources/" + res); //"index.html"
 		return nuevo;
 
     }
@@ -207,9 +192,7 @@ public class HttpServer implements Runnable {
     public void run() {
         try {
             prepareRequest(clientSocket);
-            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }catch(FileNotFoundException ex){
-            //String outputLine = error("", "Recurso no encontrado");
             
         } catch (IOException ex) {
             System.err.println("Run exception while executing thread.");
