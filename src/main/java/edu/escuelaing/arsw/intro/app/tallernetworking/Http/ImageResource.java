@@ -60,7 +60,7 @@ public class ImageResource {
         System.out.println("la imagen SE MOSTRARAA: "+xxxx);
 		out.println("HTTP/1.1 200 OK");		
         out.println("Content-Type: image/png");
-		out.println("Content-Length: " + 442);
+		out.println("Content-Length: " + 256180);
 		out.println();
         //out.print("HTTP/1.1 200 OK \r\n");
         //out.print("Content-Type: image/png \r\n");
