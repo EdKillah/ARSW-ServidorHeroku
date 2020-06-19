@@ -27,7 +27,7 @@ public class BuscarArchivo
        if(lista != null) {
            for(File elemento : lista) {
                if (elemento.isDirectory())  {
-                   subRuta = buscador(nombre, elemento).toString();
+                   buscador(nombre, elemento).toString();
                 } else if (nombre.equalsIgnoreCase(elemento.getName())){ 
                   archivoEncontrado = elemento;
                   System.out.println("Este es el elemento: "+elemento);
