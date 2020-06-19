@@ -12,8 +12,8 @@ import java.io.*;
 public class BuscarArchivo
 {
    File archivoEncontrado = null;
-   
-   public BuscarArchivo() { }
+   private String subRuta;
+   public BuscarArchivo() {subRuta=""; }
    
    /**
     * Metodo que retorna el File del archivo si este se encuentra E.O.C retornara null.
@@ -27,11 +27,15 @@ public class BuscarArchivo
        if(lista != null) {
            for(File elemento : lista) {
                if (elemento.isDirectory())  {
-                   buscador(nombre, elemento);
-                } else if (nombre.equalsIgnoreCase(elemento.getName()))
-                  { archivoEncontrado = elemento; System.out.println("El Archivo ha sido encontrado.");}
+                   subRuta = buscador(nombre, elemento).toString();
+                } else if (nombre.equalsIgnoreCase(elemento.getName())){ 
+                  archivoEncontrado = elemento;
+                  System.out.println("Este es el elemento: "+elemento);
+                  System.out.println("El Archivo ha sido encontrado.");}
                 }
             }
+       		System.out.println("SubRuta: "+subRuta);
+       		System.out.println("Este es el elemento: "+archivoEncontrado);
              return archivoEncontrado;
         } 
 }

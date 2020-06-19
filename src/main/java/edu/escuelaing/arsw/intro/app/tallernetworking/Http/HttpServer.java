@@ -135,6 +135,7 @@ public class HttpServer implements Runnable {
     private File buscarArchivo(String res) {
         //BuscarArchivo find = new BuscarArchivo();
         //return new File(System.getProperty("user.dir") + "\\src\\main\\resources\\" + res); //"index.html"
+    	System.out.println("BuscandoArchivo: "+System.getProperty("user.dir")+" esto me pasaron: "+res);
 		return new File(System.getProperty("user.dir") + "/src/main/resources/" + res); //"index.html"
 		//return new File("/src/main/resources/"+res);
 
