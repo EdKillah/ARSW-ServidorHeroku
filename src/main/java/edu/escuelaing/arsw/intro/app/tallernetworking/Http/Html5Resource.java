@@ -37,6 +37,7 @@ public class Html5Resource {
         out.println("HTTP/1.1 200 OK");		
         out.println("Content-Type: "+type);
         out.println();
+		out.println();
         out.println(cadena);
 
     }
