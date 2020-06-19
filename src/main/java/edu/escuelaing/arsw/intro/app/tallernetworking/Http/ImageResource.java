@@ -20,6 +20,8 @@ public class ImageResource {
 
     public void drawImage(OutputStream  clientSocket,PrintWriter out ,String res, File archivoEncontrado) throws IOException {
         
+		
+			try{
 			String archivoNombre =  archivoEncontrado.toString().replace(res, "");
 			System.out.println("IMAGEEEEN: "+archivoEncontrado);
 			System.out.println("archivoNombre sin res : "+archivoNombre);
@@ -43,6 +45,10 @@ public class ImageResource {
             writeImg.writeBytes("\r\n");
             writeImg.write(ArrBytes.toByteArray());
             System.out.println("Ruta de archivo: "+System.getProperty("user.dir") + res);
+			}
+			catch(javax.imageio.IIOException ex){
+				System.out.println("Capturando en no puedo crear la imagen "+ex);
+			}
         
     }
 }

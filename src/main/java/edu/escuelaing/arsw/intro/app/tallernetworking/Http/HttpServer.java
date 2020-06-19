@@ -213,7 +213,7 @@ public class HttpServer implements Runnable {
             
         } catch (IOException ex) {
             System.err.println("Run exception while executing thread.");
-            Logger.getLogger(HttpServer.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(HttpServer.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
