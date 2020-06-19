@@ -352,9 +352,9 @@ A continuación se presentan unas imagenes de un template de boostrap gratuito d
 **Nota:** Para poder acceder a los recursos de bootstrap basta con digitar *localhost:32000/bs/index.html* y el servidor redirigirá las páginas automaticamente.
 
 Código de index
-![](resources/bs1.PNG)
+![](resources/boost1.PNG)
 
-![](resources/bs2.PNG)
+![](resources/boost2.PNG)
 
 #### Página de error sencilla
 
