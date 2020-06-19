@@ -122,9 +122,9 @@ public class HttpServer implements Runnable {
             texto.writeText(clientSocket.getOutputStream(), out, archivoEncontrado, "text/css");
         }
         else{
-			//error("",res)
-            error("","esta pasandose por aca",out);
-            //out.println(outputLine);
+			System.out.println("Recursos diferentes de html5");
+            Html5Resource texto = new Html5Resource();
+            texto.writeText(clientSocket.getOutputStream(), out, archivoEncontrado, "text/php");
         }
     }
 

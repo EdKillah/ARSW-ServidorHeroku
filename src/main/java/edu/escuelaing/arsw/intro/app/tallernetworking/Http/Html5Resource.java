@@ -33,6 +33,7 @@ public class Html5Resource {
 
             cadena.append(line);
         }
+		System.out.println("SUPERO TODO: "+cadena);
         out.println("HTTP/1.1 200 OK");		
         out.println("Content-Type: "+type);
         out.println();
