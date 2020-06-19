@@ -36,7 +36,8 @@ public class ImageResource {
 			File variable = new File(System.getProperty("user.dir")+ "/resources/" + res);
 			System.out.println("File creado: "+variable);
 			//BufferedImage image = ImageIO.read(new File(System.getProperty("user.dir")+ "/resources/" + res));
-			BufferedImage image = ImageIO.read(new File("/app/src/main/resources/img/bugs.jpg"));
+			//BufferedImage image = ImageIO.read(new File("/app/src/main/resources/img/bugs.jpg"));
+			BufferedImage image = ImageIO.read(new File(archivoEncontrado));
             ByteArrayOutputStream ArrBytes = new ByteArrayOutputStream();
             DataOutputStream writeImg = new DataOutputStream(clientSocket);
             ImageIO.write(image, "PNG", ArrBytes);
