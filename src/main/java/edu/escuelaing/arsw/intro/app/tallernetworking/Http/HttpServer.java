@@ -177,7 +177,7 @@ public class HttpServer implements Runnable {
      * @param res
      * @return 
      */
-    private static void error(String outputLine, String res, PrintWriter out) {
+    public static void error(String outputLine, String res, PrintWriter out) {
 
         outputLine = "HTTP/1.1 200 OK\r\n"
                 + "Content-Type: text/html\r\n"
