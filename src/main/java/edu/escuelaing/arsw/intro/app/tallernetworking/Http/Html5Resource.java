@@ -29,16 +29,22 @@ public class Html5Resource {
 		System.out.println("Pruebaa creada: "+prueba);
         BufferedReader reader = new BufferedReader(prueba);
 		System.out.println("el reader see creo ok : "+reader);
+		String outputLine = "";
         while ((line = reader.readLine()) != null) {
 
             cadena.append(line);
         }
 		//System.out.println("SUPERO TODO: "+cadena);
-        out.println("HTTP/1.1 200 OK");		
-        out.println("Content-Type: "+type);
+		outputLine += "HTTP/1.1 200 OK \r\n";
+		outputLine += "Content-Type: text/" + type;
+		outputLine +=  "\r\n\r\n";
+		outputLine += cadena;
+        //out.println("HTTP/1.1 200 OK");		
+        //out.println("Content-Type: "+type);
 
-		out.println();
-        out.println(cadena);
+		//out.println();
+        //out.println(cadena);
+		out.print(outputLine);
 
     }
 
