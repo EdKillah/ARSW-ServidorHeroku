@@ -26,7 +26,7 @@ public class Html5Resource {
         String line = null;
 		System.out.println("Creando el archivo lector en writeText");
         FileReader prueba = new FileReader(archivoEncontrado);
-		System.out.println("Pruebaaa creada: "+prueba);
+		System.out.println("Pruebaa creada: "+prueba);
         BufferedReader reader = new BufferedReader(prueba);
 		System.out.println("el reader see creo ok : "+reader);
         while ((line = reader.readLine()) != null) {
@@ -36,7 +36,7 @@ public class Html5Resource {
 		//System.out.println("SUPERO TODO: "+cadena);
         out.println("HTTP/1.1 200 OK");		
         out.println("Content-Type: "+type);
-        out.println();
+
 		out.println();
         out.println(cadena);
 
