@@ -3,6 +3,7 @@
 
 
 
+
 # Concurrencia en servidores Http con Sockets Java
 
 El siguiente repositorio muuestra un servidor con peticiones concurrentes y el manejo de recursos html.
@@ -353,7 +354,6 @@ A continuación se presentan unas imagenes de un template de boostrap gratuito d
 Código de index
 ![](resources/bs1.PNG)
 
-Página redireccionada al darle click en el botón Tables tal como se muestra en la imagen.
 ![](resources/bs2.PNG)
 
 #### Página de error sencilla
@@ -407,7 +407,7 @@ La siguiente imagen muestra los diagramas de clases que permiten la interacción
 
 
 * [Maven](https://maven.apache.org/) - Dependency Management
-* [JMeter](https://jmeter.apache.org/) - Load test functional behavior
+* [Heroku](https://www.heroku.com/) - Heroku
 * [Java](https://www.java.com/es/download/) - Lenguaje de programación
 * [Git](https://github.com/) - Versionamiento
 
@@ -415,7 +415,7 @@ La siguiente imagen muestra los diagramas de clases que permiten la interacción
 
 ## Authors
 
-* **Eduard Jimenez** - *LOCS/Hora  626/14 = 44.7 LOCS/Hora* - Fecha: 16/06/2020
+* **Eduard Jimenez** - *LOCS/Hora  626/14 = 44.7 LOCS/Hora* - Fecha: 19/06/2020
 
 
 
