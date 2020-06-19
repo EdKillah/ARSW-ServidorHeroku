@@ -21,6 +21,7 @@ public class ImageResource {
     public void drawImage(OutputStream  clientSocket,PrintWriter out ,String res, File archivoEncontrado) throws IOException {
         
 			String archivoNombre =  archivoEncontrado.toString().replace(res, "");
+			System.out.println("IMAGEEEEN: "+archivoEncontrado);
 			System.out.println("archivoNombre sin res : "+archivoNombre);
 			if(res.contains("img/")){
 				res = res.substring(4,res.length());
