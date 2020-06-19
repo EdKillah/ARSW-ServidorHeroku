@@ -28,7 +28,7 @@ public class Html5Resource {
         FileReader prueba = new FileReader(archivoEncontrado);
 		System.out.println("Pruebaaa creada: "+prueba);
         BufferedReader reader = new BufferedReader(prueba);
-		System.out.println("el reader se creo ok : "+reader);
+		System.out.println("el reader see creo ok : "+reader);
         while ((line = reader.readLine()) != null) {
 
             cadena.append(line);
