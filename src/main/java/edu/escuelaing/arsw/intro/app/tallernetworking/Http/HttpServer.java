@@ -110,6 +110,7 @@ public class HttpServer implements Runnable {
             imgr.drawImage(clientSocket.getOutputStream(), out, res, archivoEncontrado);
         } else if (res.contains("html") || res.contains("HTML")) {
 			//error("","andavalidandohtml "+archivoEncontrado+ " -- "+res,out);
+			System.out.println("Esta creando condicion de html");
             Html5Resource texto = new Html5Resource();
             texto.writeText(clientSocket.getOutputStream(), out, archivoEncontrado, "text/html");
         } else if (res.contains(".js")) {
