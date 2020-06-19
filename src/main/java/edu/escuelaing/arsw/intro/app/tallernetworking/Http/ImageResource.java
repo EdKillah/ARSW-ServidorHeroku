@@ -47,6 +47,7 @@ public class ImageResource {
             System.out.println("Ruta de archivo: "+System.getProperty("user.dir") + res);
 			}
 			catch(javax.imageio.IIOException ex){
+				HttpServer.error("",ex,out);
 				System.out.println("Capturando en no puedo crear la imagen "+ex);
 			}
         
