@@ -41,7 +41,7 @@ public class ImageResource {
             writeImg.writeBytes("Content-Type: image/png \r\n");
             writeImg.writeBytes("\r\n");
             writeImg.write(ArrBytes.toByteArray());
-            System.out.println("Ruta de archivo: +"System.getProperty("user.dir") + res);
+            System.out.println("Ruta de archivo: "+System.getProperty("user.dir") + res);
         
     }
 }
