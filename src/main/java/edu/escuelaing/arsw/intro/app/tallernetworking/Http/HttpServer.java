@@ -68,6 +68,7 @@ public class HttpServer implements Runnable {
     private void getPetitions(String res,PrintWriter out ) throws IOException{
         String outputLine = "";
 		//error("",res,out);
+		System.out.println("ESTOY EN GET PETITIONS: "+res);
 		if(res.length()>0){
 			if (res.substring(0, 3).equals("GET")) {
 				res = res.substring(5, res.length() - 9);
