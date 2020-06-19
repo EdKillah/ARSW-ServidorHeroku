@@ -20,8 +20,16 @@ public class ImageResource {
 
     public void drawImage(OutputStream  clientSocket,PrintWriter out ,String res, File archivoEncontrado) throws IOException {
         
+			String archivoNombre =  archivoEncontrado.toString().replace(res, "");
+			System.out.println("archivoNombre sin res: "+archivoNombre);
+			if(res.contains("img/")){
+				res = res.substring(4,res.length());
+				System.out.println("Entro en condicion de tener img/: "+res);
+			}
+		
 			System.out.println("ImagenResource: res"+res);
 			System.out.println("Path del archivo: "+System.getProperty("user.dir")+ "/resources/" + res);
+			
 			File variable = new File(System.getProperty("user.dir")+ "/resources/" + res);
 			System.out.println("File creado: "+variable);
 			BufferedImage image = ImageIO.read(new File(System.getProperty("user.dir")+ "/resources/" + res));
